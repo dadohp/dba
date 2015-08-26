@@ -1,0 +1,109 @@
+# Database Configuration for OLX
+# Version       : Percona
+# Latest Chk    : Thu, 09/04/2015
+# Latest Mod    :
+
+[client]
+port                           = 3306
+socket                         = /var/run/mysqld/mysqld.sock
+
+[mysqld_safe]
+socket                         = /var/run/mysqld/mysqld.sock
+nice                           = 0
+
+[mysqld]
+user                           = mysql
+pid-file                       = /var/run/mysqld/mysqld.pid
+socket                         = /var/run/mysqld/mysqld.sock
+port                           = 3306
+basedir                        = /usr
+datadir                        = /var/lib/mysql
+tmpdir                         = /tmp
+lc-messages-dir                = /usr/share/mysql
+skip-external-locking
+skip-name-resolve
+binlog_format                  = ROW
+bind-address                   = 0.0.0.0
+thread_stack                   = 192K
+query_cache_limit              = 8M
+wait_timeout                   = 28800
+interactive_timeout            = 28800
+################################
+[mysqld]
+
+# GENERAL #
+default-storage-engine         = InnoDB
+
+# MyISAM #
+key-buffer-size                = 32M
+myisam-recover                 = FORCE,BACKUP
+
+# SAFETY #
+max-allowed-packet             = 16M
+max-connect-errors             = 1000000
+
+# BINARY LOGGING #
+log_bin                        = binlog
+expire_logs_days               = 5
+max_binlog_size                = 2G
+sync-binlog                    = 1
+
+# DB OLXID
+binlog_do_db                   = olxid
+binlog_ignore_db               = mysql
+binlog_ignore_db               = test
+binlog_ignore_db               = information_schema
+binlog_ignore_db               = performance_schema
+relay_log_index                = relay-bin.index
+replicate_same_server_id       = 0
+server_id                      = 18
+slave_compressed_protocol
+slave-skip-errors              = 1091
+
+# REPLICATION #
+relay-log                      = /var/lib/mysql/relay-bin
+slave-net-timeout              = 60
+
+# SLAVE
+gtid_mode                      = ON
+log_slave_updates              = 1
+enforce_gtid_consistency       = ON
+
+# CACHES AND LIMITS #
+tmp-table-size                 = 256M
+max-heap-table-size            = 256M
+query-cache-type               = 0
+query-cache-size               = 128M
+max-connections                = 1000
+thread-cache-size              = 100
+open-files-limit               = 65535
+table-definition-cache         = 4096
+table-open-cache               = 1024
+
+# INNODB #
+innodb-flush-method            = O_DIRECT
+innodb-log-files-in-group      = 2
+innodb-log-file-size           = 512M
+innodb-flush-log-at-trx-commit = 1
+innodb-file-per-table          = 1
+innodb-buffer-pool-size        = 84G
+
+# LOGGING #
+log-error                      = /var/lib/mysql/mysql-error.log
+log-queries-not-using-indexes  = 1
+slow-query-log                 = 1
+slow-query-log-file            = /var/lib/mysql/mysql-slow.log
+log-warnings                   = 2
+################################
+[mysqldump]
+quick
+quote-names
+max_allowed_packet             = 512M
+
+[mysql]
+#no-auto-rehash # faster start of mysql but no tab completition
+
+[isamchk]
+key_buffer                     = 32M
+
+!includedir /etc/mysql/conf.d/
