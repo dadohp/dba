@@ -1,0 +1,33 @@
+CREATE TABLE `t1` (
+  `id` int(15) NOT NULL AUTO_INCREMENT,
+  `m_id` int(11) NOT NULL,
+  `c1` decimal(6,2) DEFAULT NULL,
+  `c2` decimal(6,2) DEFAULT NULL,
+  `c3` decimal(6,2) DEFAULT NULL,
+  `c4` decimal(6,2) DEFAULT NULL,
+  `c5` decimal(6,2) DEFAULT NULL,
+  `c6` decimal(6,2) DEFAULT NULL,
+  `c7` decimal(6,2) DEFAULT NULL,
+  `factor` decimal(4,2) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=TokuDB DEFAULT CHARSET=latin1
+
+CREATE TABLE `t2` (
+  `id` int(15) NOT NULL AUTO_INCREMENT,
+  `v_id` int(15) NOT NULL,
+  `pid` int(11) DEFAULT NULL,
+  `amount` decimal(6,2) DEFAULT NULL,
+  `unit` int(1) DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=TokuDB DEFAULT CHARSET=latin1
+
+##I'm aware of the fact that I'm not using any indexes other then the primary key index. This is due to the negative time impact the keys will have on inserting. A cluster key for each table will be created at the end of the insert job
+
+##Example SQL insert
+insert into t1 values (NULL, 1 , 30, 100, 15, NULL, 10, 250, 2, NULL );
+SET @t1id = LAST_INSERT_ID();
+insert into t2 values (NULL, @t1id, 1, 750, 0),(NULL, @t1id, 1, 600, 0),(NULL, @t1id, 1, 500, 0),(NULL, @t1id, 1, 400, 0),(NULL, @t1id, 1, 300, 0),(NULL, @t1id, 1, 200, 0),(NULL, @t1id, 1, 100, 0);
+insert into t1 values (NULL, 2 , 25, 95, 14, NULL, 11, 200, 3, NULL );
+SET @t1id = LAST_INSERT_ID();
+insert into t2 values (NULL, @t1id, 1, 600, 0),(NULL, @t1id, 1, 100, 0),(NULL, @t1id, 1, 300, 0),(NULL, @t1id, 1, 443, 0),(NULL, @t1id, 1, 521, 0),(NULL, @t1id, 1, 213, 0),(NULL, @t1id, 1, 433, 0);
+[.. At least 14982 more..]
