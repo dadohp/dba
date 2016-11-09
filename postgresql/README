@@ -1,0 +1,7 @@
+Save file
+/root/Desktop/pgbackup.sh
+
+Set Crontab
+# crontab -e
+# m  h   dom mon dow user     command
+  10 17  *   *   *   *        /root/Desktop/pgbackup.sh
