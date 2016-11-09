@@ -1,0 +1,46 @@
+# CLUSTER #
+innodb_autoinc_lock_mode       = 2
+wsrep_provider                 = /usr/lib/libgalera_smm.so
+
+# IPaddress all node
+wsrep_cluster_address          = gcomm://10.10.10.140,10.10.10.141,10.10.10.142
+wsrep_node_address             = 10.10.10.140
+wsrep_sst_method               = xtrabackup-v2
+wsrep_cluster_name             = chat_cluster
+wsrep_sst_auth                 = "sstplayer:sst123sst"
+wsrep_slave_threads            = 8
+
+# Node name
+wsrep_node_name                = chat1
+
+# Donor node
+wsrep_sst_donor                = "chat2"
+wsrep_forced_binlog_format     = ROW
+wsrep_log_conflicts            = Off
+wsrep_auto_increment_control   = Off
+auto_increment_increment       = 1
+auto_increment_offset          = 1
+wsrep_retry_autocommit         = 10
+wsrep_convert_LOCK_to_trx      = 1
+wsrep_provider_options         = "gcache.size = 2G; gcache.page_size = 2G; gcache.name = /var/lib/mysql/galera/galera.cache; gcs.fc_limit = 20000"
+wsrep_max_ws_size              = 2147483648
+wsrep_max_ws_rows              = 1048576
+wsrep_replicate_myisam         = OFF
+log_output                     = NONE
+
+# For SST #
+[sst]
+inno-backup-opts               = '--no-backup-locks'
+
+# cd /var/lib/percona-xtradb-cluster && mkdir galera && touch galera/galera.cache && chown -R mysql:mysql /var/lib/percona-xtradb-cluster/galera
+
+# /etc/init.d/mysql bootstrap-pxc
+
+> SHOW STATUS LIKE 'wsrep%'
+
+> show variables like "%wsrep%"
+
+innodb_large_prefix            = on
+innodb_file_format             = barracuda
+innodb_file_per_table          = true
+
