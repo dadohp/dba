@@ -6,15 +6,15 @@ wsrep_provider                 = /usr/lib/libgalera_smm.so
 wsrep_cluster_address          = gcomm://IP-all-node
 wsrep_node_address             = IP-server
 wsrep_sst_method               = xtrabackup-v2
-wsrep_cluster_name             = chat_cluster
+wsrep_cluster_name             = nama_cluster
 wsrep_sst_auth                 = "user:password"
 wsrep_slave_threads            = 2 x cpu
 
 # Node name
-wsrep_node_name                = nama_cluster
+wsrep_node_name                = nama_node
 
 # Donor node
-wsrep_sst_donor                = "nama_cluster yang ke berapa"
+wsrep_sst_donor                = "nama_node yang ke berapa"
 wsrep_forced_binlog_format     = ROW
 wsrep_log_conflicts            = Off
 wsrep_auto_increment_control   = Off
