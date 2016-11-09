@@ -1,0 +1,108 @@
+http:/http://mysqlatyahoo.tumblr.com/
+#MySQL 5.6 Benchmarks with Haswell CPUs, SSDs and PCIe Flash
+
+#Software
+-SysBench OLTP workload installed on the database machine
+-MySQL 5.6.24 distribution from Percona
+-jemalloc used for MySQL Server and Sysbench test client
+-Charts are plotted using MySQL Performance Analyzer
+
+#Method
+-Data and software on server was wiped out post every test run.
+-Predefined number of tables - 16 or 64
+-Predefined size of rows - 20M per table
+
+#Tests
+-Read Only
+-Read Write
+-Concurrencies vary from 1 to 512 with incremental increase
+-EXT4 vs XFS
+
+#Parameters
+innodb_log_block_size=4096
+innodb_flush_log_at_trx_commit=2
+max_connections=3000
+read_only=OFF
+innodb_write_io_threads=16
+innodb_read_io_threads=16
+innodb_io_capacity=10000
+innodb_flush_method=O_DIRECT
+innodb_purge_threads=16
+innodb_flush_neighbors=0
+innodb_spin_wait_delay=24
+innodb_log_file_size=8G
+innodb_log_buffer_size=256M
+malloc_lib=/<library_path>/libjemalloc.so
+innodb_thread_concurrency=56
+table_open_cache_instances=64
+
+#Hardware
+#Flash
+Processors: 2 x Xeon E5-2697 v3 2.60GHz (HT enabled, 28 cores, 56 threads)
+Memory: 64GB
+Disk: 1T FlashMAX II 74847, x8 Gen2
+OS: RHEL 6.5.7
+
+#SSD
+Processors: 2 x Xeon E5-2697 v3 2.60GHz (HT enabled, 28 cores, 56 threads)
+Memory: 64GB
+Disk: 1T 600 MB/sec SSD
+OS: RHEL 6.5.7
+
+#What we Measured
+QPS: Reads and Writes per second
+Time: Average response time in ms / 95% response time in ms
+
+#Results
+#Measurements
+QPS: reads and writes per second
+TIME: average response time in ms/ 95% response time in ms
+Note: EXT4 on the SSD host had much worse performance than XFS, a possible reason was that EXT4 was mounted with barrier, while EXT4 on FlashMAX and XFS was mounted with nobarrier.
+
+#FlashMax PCIe - 16 Tables
+20M rows per table, each concurrency for 10 minutes
+Load time for ext4: 3875 seconds, 32.45 sysbench prepare insert statements/sec.
+Load time for xfs:   3691 seconds, 34.07 sysbench prepare insert statements/sec
+
+#FlashMax PCIe - 64 tables
+20M rows per table, each concurrency 15 minutes
+Load time for xfs: 12694 seconds, 39.62 sysbench prepare insert statements/sec.
+Load time for ext4: 13109 seconds, 3837 sysbench prepare insert statements/sec.
+
+#SSD - 16 Tables
+20M rows per table, each concurrency for 10 minutes
+Load time for ext4: 4,142 seconds, 30.36 sysbench prepare insert statements/sec.
+Load time for xfs:   3,662 seconds, 34.34 sysbench prepare insert statements/sec
+
+#SSD - 64 Tables
+20M rows per table, each concurrency for 15 minutes
+Load time for ext4: 16,548 seconds, 30.39 sysbench prepare insert statements/sec.
+Load time for xfs:   11,108 seconds, 45.28 sysbench prepare insert statements/sec
+
+#For all the charts:  
+X Axis -> Test Concurrency: number of Sysbench threads.
+Y-Axis -> QPS measured by read/write requests per second. The size of each sysbench table is around 5GB including indexes and data.
+
+With default innodb_buffer_pool_size setting, the Innodb buffer pool size is 47,298,117,632 bytes. 
+With 16 sysbench tables Innodb buffer pool can hold about half the data. 
+With 64 sysbench tables Innodb buffer pool can only hold 15% of the data.
+
+We expect the IO requirement for 16 table test case to be moderate while the IO requirement for 64 tables can be very large.
+
+#XFS vs EXT4
+We benchmarked XFS vs EXT4 file system on these storage devices as well. XFS is widely adopted across the industry to run MySQL, but we were interested in looking at EXT4 performance as well. The test data shown in the graphs below show modest differences between both. If EXT4 is mounted with no barrier option (see data from Flash host). 
+
+We will start to see significant differences for write or mixed workloads if EXT4 is mounted with the default barrier option (see data from SSD host). The charts below show results from FlashMax host where EXT4 was mounted with no barrier option.
+
+#Resource Usage Comparisons
+The below charts are for tests started at the same time on the SSD and FlashMax hosts including one round with 16 Sysbench tables and another with 64 Sysbench tables.
+
+For 64 table tests, SSD was mounted with EXT4 no barrier option while FlashMax was mounted with XFS. Since other tests have shown little difference between XFS and EXT4, the charts below should be enough to show the difference between SSD and FlashMax. All metrics have been gathered with an interval of 5 minutes.
+
+#Notes
+We dont think that the test reached the potentials of FlashMax PCIe storage. On one hand, we don’t know if its due to the MySQL version which may not be optimized to take advantage of FlashMax storage while on the other hand it could be the high CPU usage from OLTP tests of Sysbench client which is having an impact on our data due to high concurrency.
+
+We observed high system CPU especially for write tests on FlashMax storage.
+
+#Conclusion
+We believe that the choice of hardware and storage depends on the use case. Please feel free to provide your inputs and suggestions in the comments section.
