@@ -1,2 +1,9 @@
-Config MY.CNF for slave database
-*need test first
+my.cnf slave
+- need improve first
+
+my.cnf cluster
+- still development
+
+mysql bencmark
+- example from yahoo team
+
