@@ -1,0 +1,29 @@
+### Install epel release on CentOS 7
+$ yum install epel-release
+
+### Install Varnish Cache on CentOS 7
+$ yum install varnish
+$ systemctl start varnish.service
+$ systemctl start varnish.service
+
+### Configure Varnish for CentOS 7 Apache Web Server
+$ vim /etc/httpd/conf/httpd.conf
+Listen 127.0.0.1:8080
+
+### If configured Apache vhost
+<VirtualHost *:8080>
+
+$ systemctl restart httpd
+
+### Change Varnish Listen port to port 80
+$ vim /etc/varnish/varnish.params
+VARNISH_LISTEN_PORT=6081 locate to VARNISH_LISTEN_PORT=80
+
+### Configure varnish to handle HTTP Traffic
+$ vim /etc/varnish/default.vcl
+backend default {
+.host = "127.0.0.1";
+.port = "8080";
+}
+
+$ systemctl restart varnish.service
