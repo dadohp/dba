@@ -1,0 +1,94 @@
+How To Install DHCP Server In RHEL/CentOS and Ubuntu?
+"http://linux.tutsgo.com/2016/09/how-to-install-dhcp-server-in.html"
+
+DHCP stands for Dynamic Host Configuration Protocol. DHCP is a standardized network protocol used on Internet Protocol networks for dynamically distributing network configuration parameters, such as IP addresses for interfaces and services. DHCP Server can be any server (Linux or Windows) that is used to distribute IP addresses automatically to the clients in the network.
+
+#Install DHCP Server On Linux Distribution
+User : Root
+
+RHEL/Centos
+$ yum install dhcp  -y
+
+#Configuration
+In RHEL/CentOS systems, we have to assign which interface you want your DHCP server to run on in /etc/sysconfig/dhcpd file. In my case, I have only one Interface on my system (eth0), so I assigned eth0.
+
+"WARNING: This file is NOT used anymore in CentOS 7.x systems. If you are here to restrict what interfaces should dhcpd listen on, be aware that dhcpd listens *only* on interfaces for which it finds subnet declaration in dhcpd.conf. It means that explicitly enumerating interfaces also on command line should not be required in most cases."
+
+If you use RHEl/CentOS 6 system, edit file /etc/sysconfig/dhcpd
+$ vi /etc/sysconfig/dhcpd
+DHCPDARGS=eth0
+
+$ cp /usr/share/doc/dhcp-4.2.5/dhcpd.conf.example  /etc/dhcp/dhcpd.conf
+$ vi /etc/dhcp/dhcpd.conf
+option domain-name "tutsgo.com";
+option domain-name-servers server. tutsgo.com;
+default-lease-time 600;
+max-lease-time 7200;
+
+authoritative;
+
+subnet 192.168.1.0 netmask 255.255.255.0 {
+  range 192.168.50 192.168.1.200;
+  option domain-name-servers www. tutsgo.com;
+  option domain-name "server. tutsgo.com";
+  option routers 192.168.1.1;
+  option broadcast-address 192.168.1.255;
+  default-lease-time 600;
+  max-lease-time 7200;
+}
+
+[...]
+host ubuntu-client {
+hardware ethernet 08:00:27:31:05:25;
+fixed-address 192.168.1.15;
+}
+
+RHEL/Centos 7
+$ systemctl start dhcpd
+$ systemctl enable dhcpd
+
+RHEL/Centos 6
+$ service dhcpd start
+$ chkconfig on
+
+#Install DHCP Server in Ubuntu
+$ sudo apt-get install isc-dhcp-server
+
+#Configuration
+In Ubuntu systems, we have to assign which interface you want your DHCP server to run on in /etc/default/isc-dhcp-server, file. In my case, I have only one Interface on my system (eth0), so I assigned eth0.
+$ sudo vi /etc/default/isc-dhcp-server
+DHCPDARGS=eth0
+
+$ cp /usr/share/doc/dhcp-4.2.5/dhcpd.conf.example  /etc/dhcp/dhcpd.conf
+$ sudo vi /etc/dhcp/dhcpd.conf
+option domain-name " tutsgo.com ";
+option domain-name-servers server. tutsgo.com;
+default-lease-time 600;
+max-lease-time 7200;
+
+authoritative;
+
+subnet 192.168.1.0 netmask 255.255.255.0 {
+  range 192.168.50 192.168.1.200;
+  option domain-name-servers www. tutsgo.com;
+  option domain-name "server. tutsgo.com ";
+  option routers 192.168.1.1;
+  option broadcast-address 192.168.1.255;
+  default-lease-time 600;
+  max-lease-time 7200;
+}
+
+[...]
+host ubuntu-client {
+hardware ethernet 08:00:27:31:05:25;
+fixed-address 192.168.1.10;
+}
+
+Ubuntu 15.04
+$ sudo systemctl start isc-dhcp-server
+$ sudo systemctl restart isc-dhcp-server
+
+Ubuntu 14.04 and older system
+$ sudo systemctl restart isc-dhcp-server start
+$ sudo systemctl restart isc-dhcp-server start
+
