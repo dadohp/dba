@@ -4,7 +4,7 @@ Loadbalancing PostgreSQL with HaProxy
 
 System config
 - Centos 6.5
-Centos running in Vagrant, setting PostgreSQL directory port number and database cluster separately wth 3 instance.
+Centos can running in Vagrant/VM/Cloud, setting PostgreSQL directory port number and database cluster separately wth 3 instance.
 >Master
 >Replica1
 >Replica2
@@ -12,7 +12,7 @@ Centos running in Vagrant, setting PostgreSQL directory port number and database
 
 - PostgreSQL 9.4.*
 - Haproxy 1.5.*
-https://github.com/snaga/postgres-haproxy
+"https://github.com/snaga/postgres-haproxy"
 
 Test scenarios
 1. First, initialize the first in a PostgreSQL of the master instance, to start.
