@@ -1,0 +1,31 @@
+PostgreSQL deep dive
+Loadbalancing PostgreSQL with HaProxy
+"http://pgsqldeepdive.blogspot.co.id/2015/02/loadbalancing-postgresql-with-haproxy.html"
+
+System config
+- Centos 6.5
+Centos running in Vagrant, setting PostgreSQL directory port number and database cluster separately wth 3 instance.
+>Master
+>Replica1
+>Replica2
+>Replica3
+
+- PostgreSQL 9.4.*
+- Haproxy 1.5.*
+https://github.com/snaga/postgres-haproxy
+
+Test scenarios
+1. First, initialize the first in a PostgreSQL of the master instance, to start.
+2. Next 3 instance worth a replica, to be started in asynchronous replication configuration.
+3. In three replica of activating the HAProxy to spread the load.
+4. Tables required by pgbench on the master, to create the data.
+5. Through HAProxy, run the SELECT Only of pgbench.
+6. pgbench during the run, bring down one of the replica (the second replica of the in the demo).
+7. HAProxy are sure that you are removed from the target of load balancing by detecting the failure.
+8. And re-set up a replica that was down, to return to HAProxy.
+9. The return replica HAProxy starts flowing again transaction is detected.
+
+
+
+
+
