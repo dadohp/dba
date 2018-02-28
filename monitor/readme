@@ -1,4 +1,4 @@
 Monitor:
-# Prometheus
-# Grafana
-# InfluxDB
+-Prometheus
+-Grafana
+-InfluxDB
