@@ -1,5 +1,5 @@
 #!/bin/bash
-# Display usage instructions
+# Display usage instructions (devel)
 usage() { echo "Usage: $0 [-p <Playbook Path>] [-t <Playbook Title>]" 1>&2; exit 1; }
 # Gather the users options
 while getopts ":p:t:" OPTION; do
