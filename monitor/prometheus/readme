@@ -1,4 +1,4 @@
-Prometheus Centos 7
+# Prometheus Centos 7
 
 >>>> Install prometheus
 # yum update -y
