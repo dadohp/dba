@@ -1,4 +1,4 @@
-# my.cnf slave 'need improve'
-# my.cnf cluster 'development'
-# mysql bencmark 'example yahoo team'
+my.cnf slave 'need improve'
+my.cnf cluster 'development'
+mysql bencmark 'example yahoo team'
 
