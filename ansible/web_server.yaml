@@ -1,3 +1,5 @@
+# Web server
+
 ---
 - name: Install nginx
   hosts: host.name.ip
