@@ -2,21 +2,21 @@ http:/http://mysqlatyahoo.tumblr.com/
 #MySQL 5.6 Benchmarks with Haswell CPUs, SSDs and PCIe Flash
 
 #Software
--SysBench OLTP workload installed on the database machine
--MySQL 5.6.24 distribution from Percona
--jemalloc used for MySQL Server and Sysbench test client
--Charts are plotted using MySQL Performance Analyzer
+- SysBench OLTP workload installed on the database machine
+- MySQL 5.6.24 distribution from Percona
+- jemalloc used for MySQL Server and Sysbench test client
+- Charts are plotted using MySQL Performance Analyzer
 
 #Method
--Data and software on server was wiped out post every test run.
--Predefined number of tables - 16 or 64
--Predefined size of rows - 20M per table
+- Data and software on server was wiped out post every test run.
+- Predefined number of tables - 16 or 64
+- Predefined size of rows - 20M per table
 
 #Tests
--Read Only
--Read Write
--Concurrencies vary from 1 to 512 with incremental increase
--EXT4 vs XFS
+- Read Only
+- Read Write
+- Concurrencies vary from 1 to 512 with incremental increase
+- EXT4 vs XFS
 
 #Parameters
 innodb_log_block_size=4096
