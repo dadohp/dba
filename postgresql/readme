@@ -1,6 +1,6 @@
-PostgreSQL
+# PostgreSQL Backup
 
-#save file
+# save file
 /dir/pgbackup.sh
 
 # set crontab
