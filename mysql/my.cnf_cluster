@@ -1,4 +1,4 @@
-# CLUSTER #
+# CLUSTER GALERA#
 innodb_autoinc_lock_mode       = 2
 wsrep_provider                 = /usr/lib/libgalera_smm.so
 
