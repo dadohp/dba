@@ -1,5 +1,5 @@
 #How To Install DHCP Server In RHEL/CentOS and Ubuntu?
-"http://linux.tutsgo.com/2016/09/how-to-install-dhcp-server-in.html"
+#"http://linux.tutsgo.com/2016/09/how-to-install-dhcp-server-in.html"
 
 DHCP stands for Dynamic Host Configuration Protocol. DHCP is a standardized network protocol used on Internet Protocol networks for dynamically distributing network configuration parameters, such as IP addresses for interfaces and services. DHCP Server can be any server (Linux or Windows) that is used to distribute IP addresses automatically to the clients in the network.
 
