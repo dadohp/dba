@@ -1,4 +1,4 @@
-## Example table
+## Example table for tokudb
 
 CREATE TABLE `t1` (
   `id` int(15) NOT NULL AUTO_INCREMENT,
