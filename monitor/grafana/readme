@@ -1,7 +1,7 @@
 # Grafana 
 Centos 7
 
->>>> Install grafana
+# Install grafana
 # cat <<EOF | sudo tee /etc/yum.repos.d/grafana.repo
 [grafana]
 name=grafana
