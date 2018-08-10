@@ -1,7 +1,5 @@
 # Redis Cluster
-- 
-
+- Master/Slave 
 # Redis Sentinel
-- 
-
+- Cluster
 # OS Centos 7
