@@ -1,4 +1,4 @@
-# PostgreSQL Backup
+# Schedule PostgreSQL Backup
 
 # save file
 /dir/pgbackup.sh
