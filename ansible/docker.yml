@@ -10,7 +10,8 @@
        name: docker
        state: present
 
-  - name: start docker
+  - name: start and enabled docker
     service:
           name: docker
           state: started
+          enabled: true
