@@ -12,3 +12,4 @@ RUN mkdir /var/run/sshd
 RUN
 CMD
 COPY
+EXPOSE
