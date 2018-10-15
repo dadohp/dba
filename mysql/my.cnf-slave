@@ -43,7 +43,7 @@ expire_logs_days               = 5
 max_binlog_size                = 2G
 sync-binlog                    = 1
 
-# DB OLXID
+# DB 
 binlog_do_db                   = olxid
 binlog_ignore_db               = mysql
 binlog_ignore_db               = test
