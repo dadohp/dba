@@ -1,5 +1,3 @@
-### Check Host
-### Devel only
 ---
 - name: limit example play
   hosts: all
