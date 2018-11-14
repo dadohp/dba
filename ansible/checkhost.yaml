@@ -1,6 +1,6 @@
 ---
 - name: limit example play
-  hosts: all
+  hosts: webserver
   #gather-facts: false
   
   tasks:
