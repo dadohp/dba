@@ -1,7 +1,7 @@
 ## Create user
 
 ---
-- hosts: host1
+- hosts: webserver
   remote_user: user_name
 
   vars_prompt:
