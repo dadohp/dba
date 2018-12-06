@@ -44,7 +44,7 @@ max_binlog_size                = 2G
 sync-binlog                    = 1
 
 # DB 
-binlog_do_db                   = olxid
+binlog_do_db                   = nama_db
 binlog_ignore_db               = mysql
 binlog_ignore_db               = test
 binlog_ignore_db               = information_schema
