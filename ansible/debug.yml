@@ -1,5 +1,5 @@
 ---
-- name: syntax debug
+- name: sample syntax debug
   hosts: "{{ myservers }}"
   tasks:
   - name: check file coba.txt dan print hasilnya
