@@ -1,6 +1,7 @@
 # Need improved
 # Centos 7
+$ docker pull mysql
 $ docker run --name mysql -e MYSQL_ROOT_PASSWORD=your_passwd -d mysql
 $ docker ps -a
-$ docker exec -it mysql bash
+$ docker exec -it mysql /bin/bash
 > mysql -uroot -p
