@@ -1,6 +1,5 @@
-### For CLuster XtraDB
-
-# CLUSTER GALERA#
+# CLuster XtraDB #
+# CLUSTER GALERA #
 innodb_autoinc_lock_mode       = 2
 wsrep_provider                 = /usr/lib/libgalera_smm.so
 
@@ -42,7 +41,7 @@ inno-backup-opts               = '--no-backup-locks'
 
 > show variables like "%wsrep%"
 
-###set varchar diatas 255
+# set varchar diatas 255 #
 innodb_large_prefix            = on
 innodb_file_format             = barracuda
 innodb_file_per_table          = true
