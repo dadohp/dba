@@ -1,3 +1,4 @@
+### Install epel
 $ sudo yum install epel-release
 
 #### Install Varnish Cache on CentOS 7
