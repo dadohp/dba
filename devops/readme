@@ -4,4 +4,5 @@
 -ServerLess/Lambda
 -RDS
 -Role
+-Terraform
 
