@@ -1,7 +1,8 @@
 -DevOps Handbook
 -AWS
 -VPC
--ServerLess/Lambda
+-ServerLess
+-Lambda
 -RDS
 -Role
 -Terraform
@@ -10,3 +11,5 @@
 -CI/CD
 -GCP
 -Jenkins
+-BitBucket
+-Github
