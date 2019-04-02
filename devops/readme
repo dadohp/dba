@@ -1,11 +1,8 @@
--DevOps Handbook
--AWS
--VPC
+-DevOps Handbook -> check email
+-AWS -> VPC, RDS, EC2 use Terraform
 -ServerLess
 -Lambda
--RDS
 -Role
--Terraform
 -Ansible
 -Container
 -CI/CD
