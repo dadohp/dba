@@ -1,11 +1,10 @@
 -DevOps Handbook -> check email
 -AWS -> VPC, RDS, EC2 use Terraform
--ServerLess
--Lambda
+-ServerLess/Lambda
 -Role
 -Ansible
--Container
+-Container/AMI
 -CI/CD
--GCP
--Jenkins
+-GCP/Kubernetes
+-Jenkins/Gitlab/TravisCI
 -BitBucket/Github
