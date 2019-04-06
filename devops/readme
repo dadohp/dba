@@ -3,7 +3,7 @@
 -ServerLess/Lambda
 -Role
 -Ansible
--Container/AMI
+-Container/AMI/Docker
 -CI/CD
 -GCP/Kubernetes
 -Jenkins/Gitlab/TravisCI
