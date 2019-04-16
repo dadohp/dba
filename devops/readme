@@ -4,8 +4,8 @@
 -DevOps Handbook -> check email
 -AWS -> VPC,RDS,EC2
 -ServerLess/Lambda
--Role, IAM
--Ansible,Terraform
+-Role,IAM
+-Ansible,Terraform,Chef,Puppet,Saltstack
 -Container/AMI/Docker
 -CI/CD
 -GCP/Kubernetes
