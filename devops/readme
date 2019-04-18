@@ -2,7 +2,7 @@
 ### Home Work    ###
 
 -DevOps Handbook -> check email
--AWS -> VPC,RDS,EC2
+-AWS -> VPC,RDS,EC2,ELB,Auto Scale
 -ServerLess/Lambda
 -Role,IAM
 -Ansible,Terraform,Chef,Puppet,Saltstack
