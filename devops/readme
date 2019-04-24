@@ -5,7 +5,7 @@
 -AWS -> VPC,RDS,EC2,ELB,Auto Scale
 -ServerLess/Lambda
 -Role,IAM
--Ansible,Terraform,Chef,Puppet,Saltstack
+-Ansible->ready dir,Terraform,Chef,Puppet,Saltstack
 -Container/AMI/Docker
 -CI/CD
 -GCP/Kubernetes
