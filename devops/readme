@@ -1,13 +1,13 @@
 ### Learn To Fly ###
 ### Home Work    ###
 
--DevOps Handbook -> check email
--AWS -> VPC,RDS,EC2,ELB,Auto Scale
--ServerLess/Lambda
--Role,IAM
--Ansible->ready dir,Terraform,Chef,Puppet,Saltstack
--Container/AMI/Docker
--CI/CD
--GCP/Kubernetes
--Jenkins/Gitlab/TravisCI
--BitBucket/Github
+- DevOps Handbook -> check email
+- AWS -> VPC,RDS,EC2,ELB,Auto Scale
+- ServerLess/Lambda
+- Role,IAM
+- Ansible->ready dir,Terraform,Chef,Puppet,Saltstack
+- Container/AMI/Docker
+- CI/CD
+- GCP/Kubernetes
+- Jenkins/Gitlab/TravisCI
+- BitBucket/Github
