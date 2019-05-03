@@ -7,7 +7,7 @@
 - Role,IAM
 - Ansible->ready dir,Terraform,Chef,Puppet,Saltstack
 - Container/AMI/Docker
-- CI/CD
+- CI-CD
 - GCP/Kubernetes
 - Jenkins/Gitlab/TravisCI
 - BitBucket/Github
