@@ -2,7 +2,7 @@
 ### Home Work    ###
 
 - DevOps Handbook -> check email and need practice
-- AWS -> VPC,RDS,EC2,ELB,Auto Scale
+- AWS -> VPC,RDS,EC2,ELB,Auto Scale,Cache
 - ServerLess/Lambda
 - Role,IAM
 - Ansible/AWX,Terraform
