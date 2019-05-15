@@ -1,4 +1,3 @@
-- my.cnf slave
-- my.cnf cluster
+- my.cnf cluster, slave
 - mysql bencmark 'example yahoo team'
 - OS Centos 7
