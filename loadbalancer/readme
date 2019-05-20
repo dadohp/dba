@@ -1,3 +1,5 @@
 # LoadBalancer
 - Haproxy
-- Nginx reverse proxy
+- Reverse proxy nginx
+- ProxySQL
+- MaxScale
