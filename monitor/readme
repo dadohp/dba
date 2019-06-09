@@ -4,5 +4,6 @@ Grafana
 InfluxDB
 Nagios
 Munin
-Icinga
 Sensu
+Zabbix
+ELK
