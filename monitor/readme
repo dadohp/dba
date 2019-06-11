@@ -5,5 +5,7 @@ InfluxDB
 Nagios
 Munin
 Sensu
+Uchiwa
 Zabbix
+Chronograf
 ELK
