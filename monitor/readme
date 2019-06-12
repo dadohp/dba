@@ -1,11 +1,9 @@
 # Monitor:
-Prometheus
-Grafana
-InfluxDB
+Prometheus, Grafana, InfluxDB
 Nagios
 Munin
-Sensu
-Uchiwa
+Sensu, Uchiwa
 Zabbix
 Chronograf
 ELK
+Monit
