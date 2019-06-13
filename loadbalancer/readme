@@ -1,4 +1,4 @@
-# LoadBalancer Dev
+# LoadBalancer
 - Haproxy
 - NginX Reverse Proxy
 - ProxySQL
