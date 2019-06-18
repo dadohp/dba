@@ -3,4 +3,5 @@
 - NginX Reverse Proxy
 - ProxySQL
 - MaxScale
-- Pgpool
+- PGpool
+- PGbouncer
