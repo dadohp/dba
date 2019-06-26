@@ -2,7 +2,8 @@
 Prometheus, Grafana, InfluxDB
 Nagios
 Munin
-Sensu, Uchiwa
+Sensu
+Uchiwa
 Zabbix
 Chronograf
 ELK
