@@ -6,5 +6,7 @@ Sensu
 Uchiwa
 Zabbix
 Chronograf
-ELK
 Monit
+Elastich
+Logstash
+Kibana
