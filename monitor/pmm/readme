@@ -1,5 +1,2 @@
 # Percona Monitoring
-- prepare
-docker
-storage
-cpu
+- prepare (docker, storage, cpu)
