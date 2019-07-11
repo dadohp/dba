@@ -1,4 +1,4 @@
-# Schedule PostgreSQL Backup
+# Schedule PostgreSQL Backup using Crontab
 
 # save file
 /dir/pgbackup.sh
