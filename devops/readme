@@ -2,9 +2,10 @@
 - AWS -> VPC,RDS,EC2,ELB,Auto Scale,Cache
 - ServerLess/Lambda
 - Role,IAM
-- Ansible/AWX,Terraform
+- Ansible,Terraform
+- Ansible tower/AWX
 - Container/AMI/Docker
-- CI-CD
+- CI/CD
 - GCP/Kubernetes -> need register
 - Jenkins/Gitlab/TravisCI
 - BitBucket/Github
