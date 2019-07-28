@@ -1,6 +1,6 @@
 - hosts: 18.136.197.31
   become: true
   become_user: dadohp
-  become_method: sudo
+  become_method: su
   roles: 
    - role: nginx
