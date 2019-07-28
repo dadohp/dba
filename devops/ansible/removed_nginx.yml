@@ -1,4 +1,5 @@
 - hosts: 18.136.197.31
-  become: sudo
+  become: true
+  become_user: root
   roles: 
    - role: nginx
