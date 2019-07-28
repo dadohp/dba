@@ -1,0 +1,7 @@
+---
+- hosts: id
+  tasks:
+   - name: tampilkan hostname and ip
+     debug:
+       msg: >
+        default IP4 dari {{ ansible_hostname }} adalah {{  ansible_default_ipv4.address }} dari OS {{ ansible_os_family }}
