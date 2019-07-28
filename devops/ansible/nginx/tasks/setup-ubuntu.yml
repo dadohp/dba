@@ -1,5 +1,7 @@
 - name: remove depen
-  apt: "{{ item }}"
-  state: absent
+  apt: 
+   name: "{{ item }}"
+   state: absent
   with_items:
+   - apparmor
    - nginx
