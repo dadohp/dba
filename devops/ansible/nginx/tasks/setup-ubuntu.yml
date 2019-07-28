@@ -1,0 +1,13 @@
+- name: remove depen
+  apt: "{{ item }}"
+  state: absent
+  with_items:
+   - apparmor
+   - nginx
+- name: upload index.html to ubuntu
+  copy:
+    src: roles/nginx/files/index.html
+    dest: /var/www/html/
+    mode: 0644
+  notify:
+   - restart_nginx
