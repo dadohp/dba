@@ -1,7 +1,6 @@
 ## PostgreSQL
 ## Loadbalancing PostgreSQL with HaProxy
 ## http://pgsqldeepdive.blogspot.co.id/2015/02/loadbalancing-postgresql-with-haproxy.html
-## Working well production
 
 System config
 - Centos 6.5
@@ -26,7 +25,7 @@ Test scenarios
 8. And re-set up a replica that was down, to return to HAProxy.
 9. The return replica HAProxy starts flowing again transaction is detected.
 
-
+# already production
 
 
 
