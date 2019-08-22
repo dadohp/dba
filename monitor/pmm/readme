@@ -1,4 +1,4 @@
 # Percona Monitoring
 - prepare (docker, storage, cpu)
 - Ubuntu or Centos
-- MySQL, MariaDB, Percona, PostgreSQL, MongoDB
+- MySQL, MariaDB, Percona, PostgreSQL, MongoDB, RDS
