@@ -25,7 +25,7 @@ Test scenarios
 8. And re-set up a replica that was down, to return to HAProxy.
 9. The return replica HAProxy starts flowing again transaction is detected.
 
-# already production???
+# production???
 
 
 
