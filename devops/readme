@@ -5,7 +5,7 @@
 - Terraform
 - Container/AMI/Docker
 - CI/CD
-- GCP/Kubernetes -> need register
+- GCP/Kubernetes 
 - Jenkins/Gitlab/TravisCI/CircleCI
 - BitBucket/Github/Bamboo
 - Pipeline Role
