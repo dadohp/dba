@@ -3,7 +3,7 @@
 - Microservices/ServerLess/Lambda
 - Role,IAM
 - Ansible, Ansible tower/AWX
-- Terraform
+- Terraform, Pulumi
 - Container/AMI/Docker
 - CI/CD
 - GCP/Kubernetes 
