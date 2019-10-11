@@ -4,7 +4,7 @@
 - Role,IAM
 - Ansible, Ansible tower/AWX
 - Terraform, Pulumi
-- Container/AMI/Docker
+- Docker, AMI, ECS, EKR, Kubernetes
 - CI/CD
 - GCP/Kubernetes 
 - Jenkins/Gitlab/TravisCI/CircleCI
