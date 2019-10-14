@@ -6,7 +6,7 @@
 - Terraform, Pulumi
 - Docker, AMI, ECS, EKR, Kubernetes
 - CI/CD
-- GCP/Kubernetes 
+- GCP-Kubernetes 
 - Jenkins/Gitlab/TravisCI/CircleCI
 - BitBucket/Github/Bamboo
 - Pipeline Role
