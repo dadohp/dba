@@ -1,4 +1,4 @@
-#### Backup for PostgreSQL
+#### Backup PostgreSQL
 
 #!/bin/bash
 #backup destination
