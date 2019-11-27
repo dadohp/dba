@@ -16,7 +16,7 @@ EOF
 
 # yum search grafana
 # yum info grafana
-OS Ubuntu 18.04
+# OS Ubuntu 18.04
 # yum install grafana
 # vim /etc/grafana/grafana.ini
 protocol = http
