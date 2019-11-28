@@ -19,7 +19,7 @@ $ sudo systemctl restart httpd
 $ sudo vim /etc/varnish/varnish.params
 VARNISH_LISTEN_PORT=6081 locate to VARNISH_LISTEN_PORT=80
 
-#### Development & Configure varnish to handle HTTP Traffic
+# Development & Configure varnish to handle HTTP Traffic
 $ sudo vim /etc/varnish/default.vcl
 backend default {
 .host = "127.0.0.1";
