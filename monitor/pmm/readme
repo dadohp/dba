@@ -1,7 +1,4 @@
-# Percona Monitoring
+# Percona Monitoring (V1 or V2)
 - prepare (docker, storage, cpu)
 - Ubuntu or Centos
 - MySQL, MariaDB, Percona, PostgreSQL, MongoDB, RDS
-
-PMM V1
-PMM V2
