@@ -2,3 +2,5 @@ Dockerfile
 Docker-CE
 OS Centos 7
 OS Ubuntu 18.04
+
+# clean docker
