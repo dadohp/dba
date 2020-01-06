@@ -4,9 +4,9 @@
 - Role,IAM
 - Ansible, Ansible tower/AWX
 - Terraform, Pulumi
-- Docker, AMI, ECS, EKR, Kubernetes
+- Docker, AMI, ECS, EKR, EKS
 - CI/CD
-- GCP-Kubernetes 
+- GCP/Kubernetes 
 - Jenkins/Gitlab/TravisCI/CircleCI
 - BitBucket/Github/Bamboo
-- Pipeline 
+- Pipeline
