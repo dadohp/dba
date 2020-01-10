@@ -2,7 +2,7 @@
 # save file
 /dir/pgbackup.sh
 
-# set crontab
+# setup crontab
 # crontab -e
 # m  h   dom mon dow user     command
 10 17  *   *   *   *        /dir/pgbackup.sh
