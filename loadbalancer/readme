@@ -1,4 +1,4 @@
-# Load Balancers
+# Load Balancer
 - Haproxy
 - NginX Reverse Proxy
 - ProxySQL
