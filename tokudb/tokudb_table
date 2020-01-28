@@ -1,4 +1,4 @@
-# Table Example
+# Table Example not for production
 
 CREATE TABLE `t1` (
   `id` int(15) NOT NULL AUTO_INCREMENT,
