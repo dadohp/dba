@@ -1,5 +1,5 @@
-### TokuDB Config
-### Dado 
+### TokuDB Config 
+## Only for Devel
 
 # TokuDB #
 tokudb_cache_size = 2G
