@@ -1,9 +1,10 @@
 # Howto do more then 50.000 inserts per second with tokudb
+
 Current setup :
 Hardware: 
  - VPS with 4GB of RAM
  - 150GB SSD
  - 2 cores: Intel Westmere E56xx/L56xx/X56xx (Nehalem-C) 2.59GHz CPU
 Disk mount options: defaults, noatime
-OS: CentOS 6.8 64bit
+OS: CentOS 7 64bit
 Database: Percona Server 5.7.14-8
