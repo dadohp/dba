@@ -1,1 +1,4 @@
 # HaProxy for MySQL
+
+port
+max connection
