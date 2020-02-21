@@ -1,4 +1,5 @@
 # HaProxy for MySQL
+# v5
 port
 max connection
 user/passwd login
