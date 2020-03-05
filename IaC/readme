@@ -1,2 +1,5 @@
 # Infra as code
 # AWS/GCP
+VPC
+Security Group
+.pem
