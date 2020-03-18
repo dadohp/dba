@@ -1,6 +1,6 @@
 - DevOps Handbook -> check email and need practice
 - AWS Cloud Stack Technology
-- Microservices/ServerLess/Lambda
+- Microservices/Lambda
 - Role, IAM
 - Ansible, Ansible tower/AWX
 - Terraform, Pulumi
@@ -10,3 +10,4 @@
 - Jenkins/Gitlab/TravisCI/CircleCI
 - BitBucket/Github/Bamboo
 - Pipeline
+- Serverless framework
