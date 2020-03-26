@@ -1,6 +1,7 @@
 # Infra as code
 # AWS/GCP
-# MacOS
+
+# MacOS Setup
 $ cd $HOME/Downloads
 $ wget https://releases.hashicorp.com/terraform/0.11.10/terraform_0.11.11_darwin_amd64.zip
 $ unzip terraform_0.11.10_linux_amd64.zip
