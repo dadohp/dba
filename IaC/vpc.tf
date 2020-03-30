@@ -15,3 +15,11 @@ resource "aws_vpc" "name_vpc" {
   tags = {
    Name    = "nama_subnet"
   }}
+
+# INTERNET GATEWAY
+resource "aws_internet_gateway" "nama_gateway" {
+  vpc_id = "${aws_vpc.nama_vpc.id}"
+  tags = {
+    Name    = "nama_gateway"
+}
+}
