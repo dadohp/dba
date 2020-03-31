@@ -13,7 +13,15 @@ resource "aws_vpc" "name_vpc" {
   cidr_block              = "subnet_ip"
   map_public_ip_on_launch = "true"
   tags = {
-   Name    = "nama_subnet"
+   Name    = "nama_subnet_a"
+  }}
+
+  resource "aws_subnet" "nama_subnet" {
+  vpc_id                  = "${aws_vpc.nama_vpc.id}"
+  cidr_block              = "subnet_ip"
+  map_public_ip_on_launch = "true"
+  tags = {
+   Name    = "nama_subnet_b"
   }}
 
 # INTERNET GATEWAY
