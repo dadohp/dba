@@ -1,9 +1,9 @@
 # VPC
-resource "aws_vpc" "name_vpc" {
+resource "aws_vpc" "nama_vpc" {
   cidr_block           = "subnet_ip"
   enable_dns_hostnames = "true"
   tags = {
-    Name    = "name_vpc"
+    Name    = "nama_vpc"
   }
   }
 
@@ -30,4 +30,16 @@ resource "aws_internet_gateway" "nama_gateway" {
   tags = {
     Name    = "nama_gateway"
 }
+}
+
+# ROUTE TABLE
+resource "aws_route_table" "nama_route" {
+  vpc_id = "${aws_vpc.nama_vpc.id}"
+  route {
+    cidr_block = "0.0.0.0/0"
+    gateway_id = "${aws_internet_gateway.nama_gateway.id}"
+  }
+  tags = {
+    Name    = "nama_route"
+  }
 }
