@@ -43,3 +43,9 @@ resource "aws_route_table" "nama_route" {
     Name    = "nama_route"
   }
 }
+
+# ROUTE ASSOC SUBNET 
+resource "aws_route_table_association" "nama_assoc" {
+    subnet_id = "${aws_subnet.nama_subnet.id}"
+    route_table_id = "${aws_route_table.nama_route.id}"
+}
