@@ -1,3 +1,2 @@
 # Redis Cluster/Redis Sentinel/Master Slave
-# Elasticache/AWS
-# Redis container only for devel
+# Elasticache/AWS : Memcached or Redis
