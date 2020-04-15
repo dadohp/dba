@@ -7,7 +7,7 @@ resource "aws_vpc" "nama_vpc" {
   }
   }
 
- # SUBNET
+ # SUBNET PUBLIC
  resource "aws_subnet" "nama_subnet" {
   vpc_id                  = "${aws_vpc.nama_vpc.id}"
   cidr_block              = "subnet_ip"
