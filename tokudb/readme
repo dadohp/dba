@@ -1,5 +1,4 @@
 # Howto do more then 50.000 inserts per second with tokudb
-
 Current setup :
 Hardware: 
  - VPS with 4GB of RAM
