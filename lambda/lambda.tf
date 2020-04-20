@@ -1,7 +1,7 @@
 resource "aws_lambda_function" "nama_lambda_function" {
   function_name = "nama_lambda_function"
   description	= "nama_lambda_function"
-  filename	    = "./templates/lambda.zip"
+  filename	    = "./templates/lambda.zip" ## zip file script function
   role		    = "arn:aws:iam::xxx:role/monitoring"
   handler	    = "lambda.lambda_handler"
   runtime	    = "python3.7"
