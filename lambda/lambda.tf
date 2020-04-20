@@ -8,6 +8,12 @@ resource "aws_lambda_function" "nama_lambda_function" {
   memory_size   = 512
   timeout	    = 120
 
+## IF Using VPC Custom
+  vpc_config {
+    subnet_ids         = ["subnet-xxx", "subnet-xxx"]
+    security_group_ids = ["sg-xxx"]
+  }
+
   environment {
     variables	= {
       TOKEN	    = "token_bot_telegram"
