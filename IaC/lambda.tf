@@ -16,8 +16,8 @@ resource "aws_lambda_function" "nama_lambda_function" {
 
   environment {
     variables	= {
-      TOKEN	  = "token_bot_telegram"
-      USER_ID	= "chat_id_number"
+      TOKEN	  = "token_bot"
+      USER_ID	= "chat_id"
     }
   }
 
