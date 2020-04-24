@@ -1,6 +1,6 @@
 # Templates dockerfile
 
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 MAINTAINER odadph@gmail.com
  
 RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
