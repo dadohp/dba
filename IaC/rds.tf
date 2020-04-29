@@ -1,3 +1,4 @@
+#OUTPUT RDS
 output "rds_bsd" {
   description = "rds_bsd"
   value       = [
