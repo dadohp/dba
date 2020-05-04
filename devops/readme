@@ -1,13 +1,11 @@
 - DevOps Handbook -> check email and need practice
 - AWS Cloud Stack Technology
-- Microservices/Lambda
+- Microservices/Lambda, Serverless framework
 - Role, IAM
 - Ansible, Ansible tower/AWX
 - Terraform, Pulumi
-- Docker, AMI, ECS, EKR, EKS
-- CI/CD
+- Docker, AMI, ECS, EKR, EKS, Worker Nodes
+- CI/CD, Pipeline
 - GCP/Kubernetes 
 - Jenkins/Gitlab/TravisCI/CircleCI
 - BitBucket/Github/Bamboo
-- Pipeline
-- Serverless framework
