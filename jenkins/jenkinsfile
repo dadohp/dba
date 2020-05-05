@@ -8,7 +8,7 @@ pipeline {
             steps {echo 'Test'}
         }
         stage ('QA') {
-            steps {echo 'QA'}
+            steps {input('QA pass?')} ### input or button next step
         }
         stage ('Deploy') {
             steps {echo 'Deploy'}
