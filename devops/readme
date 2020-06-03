@@ -6,6 +6,6 @@
 - Terraform, Pulumi
 - Docker, AMI, ECS, EKR, EKS, Worker Nodes
 - CI/CD, Pipeline
-- GCP/Kubernetes 
+- GCP/Kubernetes/Container
 - Jenkins/Gitlab/TravisCI/CircleCI
 - BitBucket/Github/Bamboo
