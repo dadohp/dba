@@ -1,4 +1,4 @@
-# CLuster XtraDB or Galera #
+# CLuster XtraDB or Galera version 5.6#
 innodb_autoinc_lock_mode       = 2
 wsrep_provider                 = /usr/lib/libgalera_smm.so
 
