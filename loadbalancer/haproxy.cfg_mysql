@@ -1,2 +1,2 @@
 # HaProxy for MySQL
-port, max connection, user/passwd login
+port, max connection, login
