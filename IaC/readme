@@ -10,4 +10,5 @@ $ terraform -version
 Terraform v0.11.11
 
 # aws configure
+# mkdir ~/.aws
 # vim ~/.aws/credentials
