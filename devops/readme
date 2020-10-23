@@ -7,5 +7,4 @@
 - Docker, AMI, ECS, EKR, EKS, Worker Nodes
 - CI/CD, Pipeline
 - GCP/Kubernetes/Container
-- Jenkins/Gitlab/TravisCI/CircleCI
-- BitBucket/Github/Bamboo
+- Jenkins/Gitlab/TravisCI/CircleCI/BitBucket/Github/Bamboo
