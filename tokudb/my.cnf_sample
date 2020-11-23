@@ -1,5 +1,4 @@
-### TokuDB Config 
-## Only for Devel
+### TokuDB Config Development
 
 # TokuDB #
 tokudb_cache_size = 2G
