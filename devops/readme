@@ -1,10 +1,10 @@
 - DevOps Handbook -> expired
-- AWS Cloud Stack Technology
+- AWS/GKE
 - Microservices/Lambda, Serverless framework
 - Roles, IAM
 - Ansible, Ansible tower/AWX
 - Terraform, Pulumi
-- Docker, AMI, ECS, EKR, EKS, Worker Nodes
-- CI/CD, Pipeline
-- GCP/Kubernetes/Container
+- Docker
+- CI/CD
+- Kubernetes
 - Jenkins/Gitlab/TravisCI/CircleCI/BitBucket/Github/Bamboo
