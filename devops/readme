@@ -1,6 +1,6 @@
 - DevOps Handbook -> expired
 - AWS/GKE
-- Microservices/Lambda, Serverless framework
+- Serverless framework
 - Roles, IAM
 - Ansible, Ansible tower/AWX
 - Terraform, Pulumi
