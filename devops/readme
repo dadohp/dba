@@ -1,10 +1,9 @@
 - DevOps Handbook -> expired
-- AWS/GKE
+- AWS/GCP
 - Serverless framework
-- Roles, IAM
 - Ansible, Ansible tower/AWX
 - Terraform, Pulumi
 - Docker
 - CI/CD
-- Kubernetes
+- Kubernetes/EKS
 - Jenkins/Gitlab/TravisCI/CircleCI/BitBucket/Github/Bamboo
