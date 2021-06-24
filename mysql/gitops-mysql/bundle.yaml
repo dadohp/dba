@@ -316,7 +316,7 @@ kind: Deployment
 metadata:
   name: percona-xtradb-cluster-operator
 spec:
-  replicas: 1
+  replicas: 0
   selector:
     matchLabels:
       app.kubernetes.io/component: operator
